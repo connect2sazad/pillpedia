@@ -1,5 +1,70 @@
-.header-main{
-    height: 10vh;
-    width: 100%;
-    background-color: teal;
+.header-main {
+  height: 10vh;
+  width: 100%;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headersubpage-main-container {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: tomato; */
+}
+
+.pillpedia-logo{
+    height: 100%;
+    width: max-content;
+}
+
+.pillpedia-logo img{
+    height: 100%;
+}
+
+.search-input-headersub{
+    height: 100%;
+    width: 450px;
+    /* background-color: tomato; */
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textinpute-header-sub{
+    height: 30px;
+    width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 8px;
+  border: 1px solid teal;
+}
+
+.get-info-headersub-btn{
+    height: 100%;
+    width: max-content;
+    /* background-color: tomato; */
+    /* margin-left: 100px; */
+    
+}
+
+.headersub-btn{
+    height: 30px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headersub-btn:hover,
+.headersub-btn:focus{
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: teal;
+    border: none;
 }

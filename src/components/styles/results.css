@@ -1,0 +1,78 @@
+html {
+  height: 100%;
+}
+.container-main {
+  min-height: 75vh;
+  width: 100%;
+  background-color: white;
+  display: block;
+  /* margin-top: 15vh; */
+}
+
+.results-conatiner {
+  width: 70%;
+  min-height: 75vh;
+  /* background-color: red; */
+  margin-left: 10%;
+  margin-top: 5vh;
+}
+
+.a-pill {
+  min-height: 40px;
+  width: 80%;
+  /* background-color: lightblue; */
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.a-pill:first-child {
+  margin-top: 0;
+}
+
+.a-pill:last-child{
+  margin-bottom: 20px;
+}
+
+.med_name {
+  text-transform: capitalize;
+  font-size: 25px;
+}
+
+.med_name a {
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+
+.med_name a:hover {
+  color: teal;
+  text-decoration: underline;
+}
+
+.med_link {
+  color: #5f6368;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.med_description {
+  color: #4d5156;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.med_price {
+  color: #6a6c6e;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.no-results{
+  font-size: 30px;
+}
+
+.no-results:hover{
+  color: teal;
+}
