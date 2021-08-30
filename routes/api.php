@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('search-for', [DataExchange::class, 'searchFor']);
+
+Route::post('get-med-details', [DataExchange::class, 'getMedDetails']);

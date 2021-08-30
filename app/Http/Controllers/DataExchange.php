@@ -14,4 +14,11 @@ class DataExchange extends Controller
 
         return $medicine;
     }
+
+    function getMedDetails(Request $req){
+
+        $medicine = Medicine::where('med_id', $req->med_id)->first();
+
+        return $medicine;
+    }
 }
