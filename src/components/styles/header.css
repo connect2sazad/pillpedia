@@ -68,3 +68,26 @@
     color: teal;
     border: none;
 }
+
+.auth-control{
+    height: 100%;
+    width: max-content;
+    /* background-color: azure; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: violet;
+}
+
+.auth-control p{
+    cursor: pointer;
+}
+
+.auth-control a{
+    color: white;
+    text-decoration: none;
+}
+
+.auth-control a:hover{
+    text-decoration: underline;
+}

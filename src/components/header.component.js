@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router';
-import { useHistory } from 'react-router-dom';
-import $ from 'jquery';       
+import { Link, useHistory } from 'react-router-dom';
+// import $ from 'jquery';       
 
 import './styles/header.css';
 
 export const Header = () => {
     return (
         <div className="header-main" id="append-to-header">
+            <div className="auth-control">
+                <p> @connect2sazad <Link to="#">Logout</Link> </p>
+            </div>
         </div>
     );
 }
@@ -64,8 +67,8 @@ export const HeaderSubPage = () => {
         result = await result.json();
 
         localStorage.setItem('find-results', JSON.stringify(result));
-        
-        if(result.length===0)
+
+        if (result.length === 0)
             localStorage.setItem('find-status', 'not_found');
         else
             localStorage.setItem('find-status', 'found')
@@ -77,7 +80,7 @@ export const HeaderSubPage = () => {
         <div className="header-main" id="append-to-header">
             <div className="headersubpage-main-container">
                 <div className="pillpedia-logo">
-                    <img src={process.env.PUBLIC_URL + '/pillpedia.png'} alt="pillpedia" />
+                    <Link to="/"><img src={process.env.PUBLIC_URL + '/pillpedia.png'} alt="pillpedia" /></Link>
                 </div>
                 <div className="search-input-headersub">
                     <input type="text" value={findValue} onChange={handleFindValue} onKeyDown={handleKey} spellCheck="false" className="textinpute-header-sub" />
@@ -86,6 +89,17 @@ export const HeaderSubPage = () => {
                     <button className="button headersub-btn" onClick={findPill}>Get-Info</button>
                 </div>
             </div>
+            {
+                sessionStorage.getItem('admin-user')
+                    ?
+                    <>
+                        <div className="auth-control">
+                            <p> @connect2sazad <Link to="#">Logout</Link></p>
+                        </div>
+                    </>
+                    :
+                    <></>
+            }
         </div>
     );
 }

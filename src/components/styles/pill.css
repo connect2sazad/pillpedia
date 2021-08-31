@@ -29,10 +29,6 @@
     width: 100%;
 }
 
-.full-table tr{
-    /* background-color: blue; */
-}
-
 .full-table tr td:first-child{
     width: 20%;
     color: teal;
