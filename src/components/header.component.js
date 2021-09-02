@@ -6,10 +6,32 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles/header.css';
 
 export const Header = () => {
+
+    const history = useHistory();
+
+    function logout() {
+        sessionStorage.removeItem('admin-user');
+        window.location.reload();
+    }
+
+    function goToDashboard() {
+        history.push('/admin');
+    }
+
     return (
         <div className="header-main" id="append-to-header">
             <div className="auth-control">
-                <p> @connect2sazad <Link to="#">Logout</Link> </p>
+                {
+                    sessionStorage.getItem('admin-user')
+                        ?
+                        <>
+                            <div className="auth-control">
+                                <p> <span onClick={goToDashboard}>@connect2sazad</span> <Link to="#" onClick={logout}>Logout</Link></p>
+                            </div>
+                        </>
+                        :
+                        <></>
+                }
             </div>
         </div>
     );
@@ -76,6 +98,15 @@ export const HeaderSubPage = () => {
         history.push('/find/' + findValue);
     }
 
+    function goToDashboard() {
+        history.push('/admin');
+    }
+
+    function logout() {
+        sessionStorage.removeItem('admin-user');
+        window.location.reload();
+    }
+
     return (
         <div className="header-main" id="append-to-header">
             <div className="headersubpage-main-container">
@@ -94,7 +125,7 @@ export const HeaderSubPage = () => {
                     ?
                     <>
                         <div className="auth-control">
-                            <p> @connect2sazad <Link to="#">Logout</Link></p>
+                            <p> <span onClick={goToDashboard}>@connect2sazad</span> <Link to="#" onClick={logout}>Logout</Link></p>
                         </div>
                     </>
                     :

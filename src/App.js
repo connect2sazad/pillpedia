@@ -6,6 +6,8 @@ import { Search } from './components/search.component';
 import { Results } from './components/results.component';
 import { Pill } from './components/pill.component';
 import { AdminLogin } from './components/admin-login.component';
+import { Dashboard } from './components/admin.component';
+
 import { Footer } from './components/footer.component';
 import { URLNotFound } from './components/url-not-found.component';
 
@@ -26,6 +28,9 @@ function App() {
           </Route>
           <Route path="/find">
             <Search />
+          </Route>
+          <Route path="/admin">
+            <Dashboard />
           </Route>
           <Route path="/admin-login">
             <AdminLogin />

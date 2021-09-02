@@ -1,0 +1,49 @@
+.admin-container-main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-menu-bar {
+  height: 40px;
+  width: 90%;
+  /* background-color: blue; */
+  margin-top: 10px;
+}
+
+.admin-menu-bar button {
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.admin-menu-bar button:first-child {
+  margin: 0;
+}
+
+.all-pills-display {
+  height: auto;
+  width: 90%;
+  margin-top: 20px;
+  /* background-color: blue; */
+}
+
+.all-pills-display table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.all-pills-display td,
+.all-pills-display th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.all-pills-display tr:nth-child(even) {
+  background-color: #dddddd;
+}
