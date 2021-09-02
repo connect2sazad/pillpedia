@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DataExchange;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('search-for', [DataExchange::class, 'searchFor']);
 
 Route::post('get-med-details', [DataExchange::class, 'getMedDetails']);
+
+Route::post('admin-login', [UserController::class, 'pillpediaLogin']);
