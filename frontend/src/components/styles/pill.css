@@ -1,0 +1,47 @@
+.container-main {
+  min-height: 75vh;
+  width: 100%;
+  background-color: white;
+  display: block;
+  /* margin-top: 15vh; */
+}
+
+.results-conatiner {
+  width: 70%;
+  min-height: 75vh;
+  /* background-color: red; */
+  margin-left: 10%;
+  margin-top: 5vh;
+}
+
+.med-name{
+    font-size: 35px;
+    text-transform: capitalize;
+    color: teal;
+    font-weight: bold;
+}
+
+.med-short-description{
+    color: #5f6368;
+}
+
+.full-table{
+    width: 100%;
+}
+
+.full-table tr td:first-child{
+    width: 20%;
+    color: teal;
+    text-transform: capitalize;
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.full-table tr td:nth-child(2){
+    width: 80%;
+    color: black;
+    text-transform: none;
+    font-size: 18px;
+    text-align: justify;
+    /* font-weight: bold; */
+}

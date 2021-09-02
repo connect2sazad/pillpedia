@@ -1,0 +1,47 @@
+.admin-login{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-login-box{
+    height: 300px;
+    width: 300px;
+    /* background-color: teal; */
+    /* padding: 5px; */
+    /* border: 1px solid teal; */
+}
+
+.admin-login-box h1{
+    text-align: center;
+    color: teal;
+}
+
+.admin-login-box input{
+    width: 97%;
+    margin-top: 10px;
+    height: 20px;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: teal;
+}
+
+.admin-login-box button{
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.admin-login-box button:hover{
+    background-color: teal;
+    border-radius: 3px;
+}
+
+#err_disp{
+    display: none;
+}
