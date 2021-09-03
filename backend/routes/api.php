@@ -26,3 +26,5 @@ Route::post('search-for', [DataExchange::class, 'searchFor']);
 Route::post('get-med-details', [DataExchange::class, 'getMedDetails']);
 
 Route::post('admin-login', [UserController::class, 'pillpediaLogin']);
+
+Route::get('get-all-pills', [DataExchange::class, 'getAllPills']);

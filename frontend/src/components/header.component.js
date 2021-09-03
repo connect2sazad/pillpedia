@@ -103,6 +103,7 @@ export const HeaderSubPage = () => {
     }
 
     function logout() {
+        sessionStorage.removeItem('pill-dump');
         sessionStorage.removeItem('admin-user');
         window.location.reload();
     }
