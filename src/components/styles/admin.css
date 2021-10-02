@@ -29,6 +29,8 @@
   width: 90%;
   margin-top: 20px;
   /* background-color: blue; */
+  overflow-y: auto;
+  margin-bottom: 20px;
 }
 
 .all-pills-display table {

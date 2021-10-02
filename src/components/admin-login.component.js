@@ -27,6 +27,11 @@ export const AdminLogin = () => {
         setPassword(event.target.value);
     }
 
+    const handleKey = (event) => {
+        if (event.key === 'Enter')
+            login();
+    }
+
     function blast(blast_msg) {
         var get_err = {
             "status": 0,
@@ -45,8 +50,8 @@ export const AdminLogin = () => {
         return true;
     }
 
-    async function login(e) {
-        e.preventDefault();
+    async function login() {
+        // e.preventDefault();
         if (validateData()) {
 
             let data = { 'email': email, 'password': password };
@@ -94,7 +99,7 @@ export const AdminLogin = () => {
                         <hr />
                         <div id="err_disp">{errorMessage}</div>
                         <input type="text" value={email} onChange={handleEmail} placeholder="Admin Email" />
-                        <input type="password" value={password} onChange={handlePassword} placeholder="Admin Password" />
+                        <input type="password" value={password} onChange={handlePassword} onKeyDown={handleKey} placeholder="Admin Password" />
                         <button onClick={login}>Login</button>
                         <p>In case you forgot password, contact the superadmin.</p>
                     </div>
