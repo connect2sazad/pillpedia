@@ -17,4 +17,15 @@ class Medicine extends Model
     protected $fillable = [
         'name',
     ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'id',
+        'created_at',
+        'updated_at',
+    ];
 }
